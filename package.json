@@ -1,0 +1,6 @@
+{
+  "name": "stone-dam-trail-guide",
+  "private": true,
+  "type": "module",
+  "description": "Self-guided, accessible interpretive tour of Allen Station Park (demo prototype)"
+}
