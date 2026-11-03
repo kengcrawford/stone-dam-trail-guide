@@ -65,7 +65,8 @@ export default async (req: Request, context: Context) => {
   let system = SYSTEM;
   if (about) system += `\n\nThe visitor is currently looking at: ${about}. Assume short questions refer to it.`;
   if (easy) system += `\n\nThis visitor turned on easy-read. Use very short sentences and simple, everyday words.`;
-  const language = clean(body?.language, 40).replace(/[^\p{L} ]/gu, "");
+  const LANGUAGES = ["Spanish", "Simplified Chinese", "Vietnamese"];
+  const language = LANGUAGES.includes(body?.language) ? body.language : "";
   if (language) system += `\n\nThis visitor is using the guide in ${language}. Always reply in ${language}, even if they write in English. Keep place names (Allen Station Park, Cottonwood Creek, Old Stone Dam) recognizable, adding the English name in parentheses the first time if it helps.`;
 
   try {
