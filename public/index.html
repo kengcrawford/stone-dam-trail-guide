@@ -27,7 +27,7 @@
   --muted:#4E5F57;
   --accent:#1D6A72;      /* Cottonwood Creek water */
   --accent-ink:#FFFFFF;
-  --prairie:#9A6B12;     /* little bluestem in November */
+  --prairie:#7E570C;     /* little bluestem in November (darkened for 4.5:1 text contrast) */
   --line:#C9D3CD;
   --ok:#2F6B3A; --warn:#8A5A00;
   --font-display:"Bitter", Georgia, "Times New Roman", serif;
@@ -931,7 +931,7 @@ function mapSVG(hereId){
   const pts = STOPS.map(s => `${s.x},${s.y}`);
   const paved = "M70,470 C110,440 130,410 150,390 S190,330 210,300 S270,240 300,215 S440,120 470,110 S510,60 520,40";
   return `
-  <svg viewBox="0 0 600 520" role="img" aria-labelledby="mapT mapD">
+  <svg viewBox="0 0 600 520" role="group" aria-labelledby="mapT" aria-describedby="mapD">
     <title id="mapT">Trail map of the Stone Dam walk</title>
     <desc id="mapD">A schematic map. Cottonwood Creek winds from the bottom left to the top right. The paved trail runs alongside it with seven numbered stops, from the trailhead at the bottom left to the prairie at the top right. Stop 5 is on a short gravel spur.</desc>
     <rect width="600" height="520" fill="var(--surface)"/>
@@ -1146,7 +1146,7 @@ function toggleMic(){
     const m = document.getElementById("micBtn"); if (m){ m.setAttribute("aria-pressed","true"); m.setAttribute("aria-label","Stop listening"); }
   }catch(e){ listening = false; addBot("Voice input isn't available in this browser. Please type your question.", true); }
 }
-function addBot(text, err){ chat.push({role:"assistant", content:text, err:!!err}); if ((location.hash||"") === "#ask") renderAsk(); }
+function addBot(text, err){ chat.push({role:"assistant", content:T(text), err:!!err}); if ((location.hash||"") === "#ask") renderAsk(); }
 async function sendAsk(text){
   text = String(text || "").trim();
   if (!text || asking) return;
@@ -1159,11 +1159,11 @@ async function sendAsk(text){
     const res = await fetch(ASK_URL, {method:"POST", headers:{"content-type":"application/json"},
       body: JSON.stringify({messages, context: askAbout ? askAbout.label : "", easyRead: !!S.easy, language: LANG_INFO[LANG].aiName})});
     let data = {}; try{ data = await res.json(); }catch(e){}
-    if (res.status === 429){ answer = "Lots of questions right now. Please wait a minute and try again."; failed = true; }
-    else if (!res.ok || !data.answer){ answer = data.error || "The Creek Guide couldn't answer just now. Please try again."; failed = true; }
+    if (res.status === 429){ answer = T("Lots of questions right now. Please wait a minute and try again."); failed = true; }
+    else if (!res.ok || !data.answer){ answer = T(data.error || "The Creek Guide couldn't answer just now. Please try again."); failed = true; }
     else answer = data.answer;
   }catch(e){
-    answer = "The Creek Guide works on the live site, stone-dam-trail-guide.netlify.app. It can't connect from this preview.";
+    answer = T(location.hostname.endsWith("netlify.app") ? "The Creek Guide couldn't answer just now. Please try again." : "The Creek Guide works on the live site, stone-dam-trail-guide.netlify.app. It can't connect from this preview.");
     failed = true;
   }
   asking = false;
@@ -1203,7 +1203,7 @@ function renderAbout(){
     </section>
     <section class="card stack">
       <h2 style="font-size:1.1em">Others doing similar work</h2>
-      <div class="tablewrap"><table class="compare">
+      <div class="tablewrap" tabindex="0" role="region" aria-label="Others doing similar work"><table class="compare">
         <thead><tr><th>Who</th><th>What</th><th>Takeaway</th></tr></thead>
         <tbody>
           <tr><td>National Park Service + Univ. of Hawaiʻi (UniDescription)</td><td>Free app with audio-described park brochures for blind and low-vision visitors</td><td>Audio description as its own layer, field-tested with blind users</td></tr>
