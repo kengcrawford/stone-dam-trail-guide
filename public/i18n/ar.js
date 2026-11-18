@@ -61,7 +61,7 @@ ui: {
   "Install app": "تثبيت التطبيق",
   "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "للتثبيت: المس زر المشاركة في Safari، ثم اختر «إضافة إلى الشاشة الرئيسية».",
   "Getting there": "كيف تصل",
-  "Park in the Allen Station Park lot. The trail starts at Stop 1. Free.": "اركن سيارتك في موقف منتزه آلن ستيشن. يبدأ الممشى من المحطة 1. مجانًا.",
+  "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "اركن سيارتك في موقف بداية الممشى بجوار طريق Exchange Parkway. تبدأ الجولة من هنا عند المحطة 1. مجانًا.",
   "Open the address in a maps app": "افتح العنوان في تطبيق الخرائط",
   "Walking map": "خريطة المشي",
   "High contrast": "تباين عالٍ",

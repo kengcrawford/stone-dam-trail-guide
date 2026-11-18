@@ -61,7 +61,7 @@ ui: {
   "Install app": "యాప్ ఇన్‌స్టాల్ చేయండి",
   "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "ఇన్‌స్టాల్ చేయడానికి: Safariలో షేర్ బటన్ నొక్కి, «హోమ్ స్క్రీన్‌కు జోడించు» ఎంచుకోండి.",
   "Getting there": "ఇక్కడికి ఎలా చేరాలి",
-  "Park in the Allen Station Park lot. The trail starts at Stop 1. Free.": "అలెన్ స్టేషన్ పార్క్ పార్కింగ్‌లో వాహనం నిలపండి. కాలిబాట మజిలీ 1 నుండి మొదలవుతుంది. ఉచితం.",
+  "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Exchange Parkway పక్కన ఉన్న కాలిబాట మొదలు పార్కింగ్‌లో వాహనం నిలపండి. నడక ఇక్కడే మజిలీ 1 నుండి మొదలవుతుంది. ఉచితం.",
   "Open the address in a maps app": "చిరునామాను మ్యాప్స్ యాప్‌లో తెరవండి",
   "Walking map": "నడక మ్యాప్",
   "High contrast": "అధిక కాంట్రాస్ట్",

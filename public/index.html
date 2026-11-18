@@ -642,7 +642,7 @@ const SPOTS = [
 ];
 
 /* Stop positions. PLACEHOLDERS near the Old Stone Dam until recorded on site with the staff setup tool (About tab). */
-const GEO_DEFAULT = {1:[33.11500,-96.66550],2:[33.11570,-96.66510],3:[33.11630,-96.66480],4:[33.11697,-96.66442],5:[33.11750,-96.66460],6:[33.11790,-96.66370],7:[33.11850,-96.66330]};
+const GEO_DEFAULT = {1:[33.1143357,-96.6648707],2:[33.11570,-96.66510],3:[33.11630,-96.66480],4:[33.11697,-96.66442],5:[33.11750,-96.66460],6:[33.11790,-96.66370],7:[33.11850,-96.66330]};
 const ARRIVE_M = 25; // about 80 ft
 
 /* ---------------- State ---------------- */
@@ -948,14 +948,15 @@ function mapSVG(hereId){
 }
 
 /* Opens the phone's own maps app: Apple Maps on iPhone/iPad, the default app on Android, Google Maps in a new tab elsewhere. */
-const PARK_ADDRESS = "1120 N. Cedar Drive, Allen, TX 75002";
+/* Parking for the dam: the Allen Water Station Trail Head lot (pin supplied by Ken, Nov 2026). */
+const TRAILHEAD = { name: "Allen Water Station Trail Head", lat: 33.1143357, lng: -96.6648707, google: "https://maps.app.goo.gl/FJb9uGrEKYP51gWEA" };
 function mapsLink(){
-  const q = "Allen Station Park, " + PARK_ADDRESS;
+  const ll = TRAILHEAD.lat + "," + TRAILHEAD.lng;
   const ua = navigator.userAgent || "";
   const iOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-  if (iOS) return { href: "https://maps.apple.com/?q=" + encodeURIComponent("Allen Station Park") + "&address=" + encodeURIComponent(PARK_ADDRESS), newTab: false };
-  if (/Android/i.test(ua)) return { href: "geo:0,0?q=" + encodeURIComponent(q), newTab: false };
-  return { href: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q), newTab: true };
+  if (iOS) return { href: "https://maps.apple.com/?q=" + encodeURIComponent(TRAILHEAD.name) + "&ll=" + ll, newTab: false };
+  if (/Android/i.test(ua)) return { href: "geo:" + ll + "?q=" + ll + "(" + encodeURIComponent(TRAILHEAD.name) + ")", newTab: false };
+  return { href: TRAILHEAD.google, newTab: true };
 }
 function renderMap(){
   const stops = activeStops();
@@ -965,7 +966,7 @@ function renderMap(){
     <h1 style="font-size:1.45em">Trail map</h1>
     <section class="card stack" aria-labelledby="gtH">
       <h2 id="gtH" style="font-size:1.1em">Getting there</h2>
-      <p><b>Allen Station Park</b><br><span data-notr>1120 N. Cedar Drive<br>Allen, TX 75002</span><br><span class="muted">Park in the Allen Station Park lot. The trail starts at Stop 1. Free.</span></p>
+      <p><b data-notr>Allen Water Station Trail Head</b><br><span data-notr>201 E. Exchange Parkway<br>Allen, TX 75002</span><br><span class="muted">Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.</span></p>
       <a class="btn ghost" id="mapsBtn" href="${mapsLink().href}"${mapsLink().newTab ? ' target="_blank" rel="noopener"' : ""}>Open the address in a maps app</a>
     </section>
     <h2 style="font-size:1.1em">Walking map</h2>

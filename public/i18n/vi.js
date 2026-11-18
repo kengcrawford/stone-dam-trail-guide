@@ -62,7 +62,7 @@ ui: {
   "Install app": "Cài ứng dụng",
   "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "Để cài đặt: chạm nút Chia sẻ trong Safari, rồi chọn «Thêm vào Màn hình chính».",
   "Getting there": "Đường đến",
-  "Park in the Allen Station Park lot. The trail starts at Stop 1. Free.": "Đỗ xe ở bãi đỗ của Công viên Allen Station. Đường mòn bắt đầu ở Trạm 1. Miễn phí.",
+  "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Đỗ xe ở bãi đầu đường mòn cạnh Exchange Parkway. Chuyến đi bắt đầu tại đây, ở Trạm 1. Miễn phí.",
   "Open the address in a maps app": "Mở địa chỉ trong ứng dụng bản đồ",
   "Walking map": "Bản đồ đi bộ",
   "High contrast": "Độ tương phản cao",

@@ -62,7 +62,7 @@ ui: {
   "Install app": "Instalar app",
   "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "Para instalar: toca el botón Compartir en Safari y elige «Agregar a pantalla de inicio».",
   "Getting there": "Cómo llegar",
-  "Park in the Allen Station Park lot. The trail starts at Stop 1. Free.": "Estaciona en el estacionamiento de Allen Station Park. El sendero empieza en la Parada 1. Gratis.",
+  "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Estaciona en el estacionamiento del inicio del sendero, junto a Exchange Parkway. El paseo empieza aquí, en la Parada 1. Gratis.",
   "Open the address in a maps app": "Abrir la dirección en una app de mapas",
   "Walking map": "Mapa del recorrido a pie",
   "High contrast": "Alto contraste",

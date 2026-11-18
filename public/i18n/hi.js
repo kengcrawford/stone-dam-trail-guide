@@ -61,7 +61,7 @@ ui: {
   "Install app": "ऐप इंस्टॉल करें",
   "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "इंस्टॉल करने के लिए: Safari में शेयर बटन दबाएँ, फिर «होम स्क्रीन में जोड़ें» चुनें।",
   "Getting there": "यहाँ कैसे पहुँचें",
-  "Park in the Allen Station Park lot. The trail starts at Stop 1. Free.": "एलन स्टेशन पार्क की पार्किंग में गाड़ी खड़ी करें। पगडंडी पड़ाव 1 से शुरू होती है। मुफ़्त।",
+  "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Exchange Parkway के पास पगडंडी की शुरुआत वाली पार्किंग में गाड़ी खड़ी करें। सैर यहीं पड़ाव 1 से शुरू होती है। मुफ़्त।",
   "Open the address in a maps app": "पता नक़्शा ऐप में खोलें",
   "Walking map": "पैदल नक़्शा",
   "High contrast": "उच्च कंट्रास्ट",

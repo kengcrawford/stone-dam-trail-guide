@@ -62,7 +62,7 @@ ui: {
   "Install app": "安装应用",
   "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "安装方法：在 Safari 中点“分享”按钮，然后选择“添加到主屏幕”。",
   "Getting there": "如何前往",
-  "Park in the Allen Station Park lot. The trail starts at Stop 1. Free.": "请在艾伦车站公园停车场停车。步道从第 1 站开始。免费。",
+  "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "请在 Exchange Parkway 旁的步道起点停车场停车。步行从这里的第 1 站开始。免费。",
   "Open the address in a maps app": "在地图应用中打开地址",
   "Walking map": "步行地图",
   "High contrast": "高对比度",
