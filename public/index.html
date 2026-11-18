@@ -947,12 +947,28 @@ function mapSVG(hereId){
   </svg>`;
 }
 
+/* Opens the phone's own maps app: Apple Maps on iPhone/iPad, the default app on Android, Google Maps in a new tab elsewhere. */
+const PARK_ADDRESS = "1120 N. Cedar Drive, Allen, TX 75002";
+function mapsLink(){
+  const q = "Allen Station Park, " + PARK_ADDRESS;
+  const ua = navigator.userAgent || "";
+  const iOS = /iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (iOS) return { href: "https://maps.apple.com/?q=" + encodeURIComponent("Allen Station Park") + "&address=" + encodeURIComponent(PARK_ADDRESS), newTab: false };
+  if (/Android/i.test(ua)) return { href: "geo:0,0?q=" + encodeURIComponent(q), newTab: false };
+  return { href: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q), newTab: true };
+}
 function renderMap(){
   const stops = activeStops();
   const here = stops[S.simIndex] || stops[0];
   view.innerHTML = `
   <div class="stack" style="padding-top:18px">
     <h1 style="font-size:1.45em">Trail map</h1>
+    <section class="card stack" aria-labelledby="gtH">
+      <h2 id="gtH" style="font-size:1.1em">Getting there</h2>
+      <p><b>Allen Station Park</b><br><span data-notr>1120 N. Cedar Drive<br>Allen, TX 75002</span><br><span class="muted">Park in the Allen Station Park lot. The trail starts at Stop 1. Free.</span></p>
+      <a class="btn ghost" id="mapsBtn" href="${mapsLink().href}"${mapsLink().newTab ? ' target="_blank" rel="noopener"' : ""}>Open the address in a maps app</a>
+    </section>
+    <h2 style="font-size:1.1em">Walking map</h2>
     <div class="mapwrap">
       ${mapSVG(-1)}
       <div class="legend"><span><i style="border-color:var(--ink)"></i>Paved, step-free</span><span><i style="border-color:var(--prairie);border-top-style:dotted"></i>Gravel spur</span><span><i style="border-color:var(--accent);opacity:.5"></i>Creek</span></div>
