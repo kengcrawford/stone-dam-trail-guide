@@ -59,6 +59,8 @@ ui: {
   "Light text on a dark background, easier on the eyes at dusk": "Texto claro sobre fondo oscuro, más cómodo para la vista al atardecer",
   "Switch to dark mode": "Cambiar a modo oscuro",
   "Switch to light mode": "Cambiar a modo claro",
+  "Install app": "Instalar app",
+  "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "Para instalar: toca el botón Compartir en Safari y elige «Agregar a pantalla de inicio».",
   "High contrast": "Alto contraste",
   "Black, white and yellow for bright sun or low vision": "Negro, blanco y amarillo para sol fuerte o baja visión",
   "Less motion": "Menos movimiento", "Turns off animation": "Desactiva las animaciones",

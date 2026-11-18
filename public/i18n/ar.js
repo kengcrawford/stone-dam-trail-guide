@@ -58,6 +58,8 @@ ui: {
   "Light text on a dark background, easier on the eyes at dusk": "نص فاتح على خلفية داكنة، أريح للعين عند الغروب",
   "Switch to dark mode": "التبديل إلى الوضع الداكن",
   "Switch to light mode": "التبديل إلى الوضع الفاتح",
+  "Install app": "تثبيت التطبيق",
+  "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "للتثبيت: المس زر المشاركة في Safari، ثم اختر «إضافة إلى الشاشة الرئيسية».",
   "High contrast": "تباين عالٍ",
   "Black, white and yellow for bright sun or low vision": "أسود وأبيض وأصفر للشمس الساطعة أو ضعف البصر",
   "Less motion": "حركة أقل", "Turns off animation": "يوقف الحركة على الشاشة",

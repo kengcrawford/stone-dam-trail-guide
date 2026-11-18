@@ -59,6 +59,8 @@ ui: {
   "Light text on a dark background, easier on the eyes at dusk": "Chữ sáng trên nền tối, dễ nhìn hơn lúc chạng vạng",
   "Switch to dark mode": "Chuyển sang chế độ tối",
   "Switch to light mode": "Chuyển sang chế độ sáng",
+  "Install app": "Cài ứng dụng",
+  "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "Để cài đặt: chạm nút Chia sẻ trong Safari, rồi chọn «Thêm vào Màn hình chính».",
   "High contrast": "Độ tương phản cao",
   "Black, white and yellow for bright sun or low vision": "Đen, trắng và vàng cho nắng gắt hoặc thị lực kém",
   "Less motion": "Giảm chuyển động", "Turns off animation": "Tắt hiệu ứng động",

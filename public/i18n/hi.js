@@ -58,6 +58,8 @@ ui: {
   "Light text on a dark background, easier on the eyes at dusk": "गहरे रंग की पृष्ठभूमि पर हल्का पाठ, शाम के समय आँखों के लिए आरामदायक",
   "Switch to dark mode": "डार्क मोड चालू करें",
   "Switch to light mode": "लाइट मोड चालू करें",
+  "Install app": "ऐप इंस्टॉल करें",
+  "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "इंस्टॉल करने के लिए: Safari में शेयर बटन दबाएँ, फिर «होम स्क्रीन में जोड़ें» चुनें।",
   "High contrast": "उच्च कंट्रास्ट",
   "Black, white and yellow for bright sun or low vision": "तेज़ धूप या कमज़ोर नज़र के लिए काला, सफ़ेद और पीला",
   "Less motion": "कम हलचल", "Turns off animation": "एनिमेशन बंद करता है",

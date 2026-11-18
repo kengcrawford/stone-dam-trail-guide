@@ -59,6 +59,8 @@ ui: {
   "Light text on a dark background, easier on the eyes at dusk": "深色背景配浅色文字，黄昏时看起来更舒适",
   "Switch to dark mode": "切换到深色模式",
   "Switch to light mode": "切换到浅色模式",
+  "Install app": "安装应用",
+  "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "安装方法：在 Safari 中点“分享”按钮，然后选择“添加到主屏幕”。",
   "High contrast": "高对比度",
   "Black, white and yellow for bright sun or low vision": "黑、白、黄配色，适合强烈阳光或低视力",
   "Less motion": "减少动画", "Turns off animation": "关闭动画效果",

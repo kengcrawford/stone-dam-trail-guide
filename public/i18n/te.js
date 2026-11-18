@@ -58,6 +58,8 @@ ui: {
   "Light text on a dark background, easier on the eyes at dusk": "ముదురు నేపథ్యంపై లేత అక్షరాలు, సాయంత్రం వేళ కళ్లకు హాయిగా ఉంటుంది",
   "Switch to dark mode": "డార్క్ మోడ్‌కి మారండి",
   "Switch to light mode": "లైట్ మోడ్‌కి మారండి",
+  "Install app": "యాప్ ఇన్‌స్టాల్ చేయండి",
+  "To install: tap the Share button in Safari, then choose “Add to Home Screen”.": "ఇన్‌స్టాల్ చేయడానికి: Safariలో షేర్ బటన్ నొక్కి, «హోమ్ స్క్రీన్‌కు జోడించు» ఎంచుకోండి.",
   "High contrast": "అధిక కాంట్రాస్ట్",
   "Black, white and yellow for bright sun or low vision": "బలమైన ఎండ లేదా తక్కువ చూపు కోసం నలుపు, తెలుపు, పసుపు",
   "Less motion": "తక్కువ కదలిక", "Turns off animation": "యానిమేషన్‌ను ఆపుతుంది",
