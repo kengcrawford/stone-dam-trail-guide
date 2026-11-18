@@ -220,6 +220,7 @@ ul.tight{margin:6px 0 0;padding-inline-start:20px} ul.tight li+li{margin-top:4px
 .species{display:grid;gap:10px}
 .sp{display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px;text-decoration:none;color:inherit}
 .sp.caution{border-inline-start:5px solid var(--warn)}
+.themebtn{width:44px;padding:0;display:grid;place-items:center}.themebtn svg{width:22px;height:22px}
 .platebg{background:color-mix(in srgb, var(--accent) 9%, var(--bg));border-radius:12px;display:grid;place-items:center;aspect-ratio:1}
 :root[data-contrast="high"] .platebg{background:#FFFFFF}
 .sp .nm{font-weight:700;display:block}
@@ -259,6 +260,7 @@ ul.tight{margin:6px 0 0;padding-inline-start:20px} ul.tight li+li{margin-top:4px
   <header class="top">
     <div class="brand"><b>Stone Dam Trail Guide</b><span>Allen Station Park · Cottonwood Creek · Allen, TX</span></div>
     <button class="iconbtn langbtn" id="openLang" aria-haspopup="dialog" aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><span id="langCode" data-notr>EN</span></button>
+    <button class="iconbtn themebtn" id="themeBtn" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
     <button class="iconbtn" id="openSettings" aria-haspopup="dialog" aria-label="Make the guide work for you" title="Make the guide work for you"><span aria-hidden="true" data-notr>Aa</span></button>
   </header>
   <main id="view" tabindex="-1"></main>
@@ -301,6 +303,7 @@ ul.tight{margin:6px 0 0;padding-inline-start:20px} ul.tight li+li{margin-top:4px
     <div class="opt"><div><b>Step-free route only</b><small>Hide stops reached by grass, gravel or a slope over 5%</small></div><button class="switch" role="switch" aria-checked="false" id="optStepfree" aria-label="Step-free route only"></button></div>
     <div class="opt"><div><b>Easy-read text</b><small>Short sentences and plain words at each stop</small></div><button class="switch" role="switch" aria-checked="false" id="optEasy" aria-label="Easy-read text"></button></div>
     <div class="opt"><div><b>Describe what's in front of me</b><small>Plays a visual description before each story, for blind and low-vision visitors</small></div><button class="switch" role="switch" aria-checked="false" id="optDescribe" aria-label="Describe what's in front of me"></button></div>
+    <div class="opt"><div><b>Dark mode</b><small>Light text on a dark background, easier on the eyes at dusk</small></div><button class="switch" role="switch" aria-checked="false" id="optDark" aria-label="Dark mode"></button></div>
     <div class="opt"><div><b>High contrast</b><small>Black, white and yellow for bright sun or low vision</small></div><button class="switch" role="switch" aria-checked="false" id="optContrast" aria-label="High contrast"></button></div>
     <div class="opt" style="border-bottom:0"><div><b>Less motion</b><small>Turns off animation</small></div><button class="switch" role="switch" aria-checked="false" id="optMotion" aria-label="Less motion"></button></div>
   </div>
@@ -643,6 +646,7 @@ const S = {
   motion: store.get("motion",false),
   rate: store.get("rate",1),
   readAloud: store.get("readAloud",false),
+  theme: store.get("theme",null),   // "light" | "dark" | null (follow the phone)
   gps: store.get("gps",false),
   geo: Object.assign({}, GEO_DEFAULT, store.get("geo",{})),
   geoRecorded: store.get("geoRecorded",[]),
@@ -652,7 +656,7 @@ const S = {
 function save(){
   store.set("route",S.route); store.set("visited",[...S.visited]); store.set("spotted",[...S.spotted]);
   store.set("note",S.note); store.set("scale",S.scale); store.set("stepfree",S.stepfree); store.set("easy",S.easy);
-  store.set("describe",S.describe); store.set("contrast",S.contrast); store.set("motion",S.motion); store.set("rate",S.rate); store.set("readAloud",S.readAloud); store.set("gps",S.gps);
+  store.set("describe",S.describe); store.set("contrast",S.contrast); store.set("motion",S.motion); store.set("rate",S.rate); store.set("readAloud",S.readAloud); store.set("gps",S.gps); store.set("theme",S.theme);
 }
 function activeStops(){
   if (S.route === "short") return STOPS.filter(s => s.id <= 4);
@@ -1212,6 +1216,7 @@ function renderAbout(){
       </ul>
     </section>
     <p class="demo-note">Prototype by Ken G. Crawford Consulting, November 2026. Not an official City of Allen product.</p>
+    <p style="text-align:center;font-size:.92em;margin-top:6px">A Project of Synchronous Life Labs. Visit <a href="https://synchronouslife.com/labs" target="_blank" rel="noopener">SynchronousLife.com/Labs</a> to discover more projects.</p>
   </div>`;
   const msg = document.getElementById("svMsg");
   view.querySelectorAll("[data-rec]").forEach(b => b.addEventListener("click", () => {
@@ -1381,7 +1386,20 @@ window.addEventListener("hashchange", route);
 
 /* ---------------- Settings ---------------- */
 const root = document.documentElement;
+const darkQuery = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+function isDark(){ return S.theme ? S.theme === "dark" : !!(darkQuery && darkQuery.matches); }
+const iconSun = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>';
+const iconMoon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
+function applyTheme(){
+  S.theme ? root.setAttribute("data-theme", S.theme) : root.removeAttribute("data-theme");
+  const dark = isDark(), label = T(dark ? "Switch to light mode" : "Switch to dark mode");
+  const b = document.getElementById("themeBtn");
+  if (b){ b.innerHTML = dark ? iconSun : iconMoon; b.setAttribute("aria-label", label); b.title = label; }
+  const sw = document.getElementById("optDark"); if (sw) sw.setAttribute("aria-checked", dark ? "true" : "false");
+}
+function toggleTheme(){ S.theme = isDark() ? "light" : "dark"; save(); applyTheme(); }
 function applySettings(){
+  applyTheme();
   root.style.setProperty("--scale", S.scale);
   S.contrast ? root.setAttribute("data-contrast","high") : root.removeAttribute("data-contrast");
   S.motion ? root.setAttribute("data-motion","reduce") : root.removeAttribute("data-motion");
@@ -1391,6 +1409,9 @@ function applySettings(){
 }
 document.querySelectorAll("[data-scale]").forEach(b => b.addEventListener("click", () => { S.scale = parseFloat(b.dataset.scale); save(); applySettings(); }));
 document.getElementById("optGps").addEventListener("click", () => setGps(!S.gps));
+document.getElementById("themeBtn").addEventListener("click", toggleTheme);
+document.getElementById("optDark").addEventListener("click", toggleTheme);
+if (darkQuery && darkQuery.addEventListener) darkQuery.addEventListener("change", () => { if (!S.theme) applyTheme(); });
 document.getElementById("optReadAloud").addEventListener("click", () => { S.readAloud = !S.readAloud; save(); applySettings(); });
 document.getElementById("arrivePlay").addEventListener("click", () => {
   const id = +document.getElementById("arrive").dataset.stop;
