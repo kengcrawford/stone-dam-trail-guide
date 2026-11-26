@@ -65,6 +65,8 @@ ui: {
   "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Đỗ xe ở bãi đầu đường mòn cạnh Exchange Parkway. Chuyến đi bắt đầu tại đây, ở Trạm 1. Miễn phí.",
   "Open the address in a maps app": "Mở địa chỉ trong ứng dụng bản đồ",
   "Walking map": "Bản đồ đi bộ",
+  "A Project of Synchronous Life Labs. Visit": "Một dự án của Synchronous Life Labs. Truy cập",
+  "to discover more projects.": "để khám phá thêm các dự án khác.",
   "High contrast": "Độ tương phản cao",
   "Black, white and yellow for bright sun or low vision": "Đen, trắng và vàng cho nắng gắt hoặc thị lực kém",
   "Less motion": "Giảm chuyển động", "Turns off animation": "Tắt hiệu ứng động",

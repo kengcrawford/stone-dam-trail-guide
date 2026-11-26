@@ -65,6 +65,8 @@ ui: {
   "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Estaciona en el estacionamiento del inicio del sendero, junto a Exchange Parkway. El paseo empieza aquí, en la Parada 1. Gratis.",
   "Open the address in a maps app": "Abrir la dirección en una app de mapas",
   "Walking map": "Mapa del recorrido a pie",
+  "A Project of Synchronous Life Labs. Visit": "Un proyecto de Synchronous Life Labs. Visita",
+  "to discover more projects.": "para descubrir más proyectos.",
   "High contrast": "Alto contraste",
   "Black, white and yellow for bright sun or low vision": "Negro, blanco y amarillo para sol fuerte o baja visión",
   "Less motion": "Menos movimiento", "Turns off animation": "Desactiva las animaciones",

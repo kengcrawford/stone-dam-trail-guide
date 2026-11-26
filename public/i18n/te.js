@@ -64,6 +64,8 @@ ui: {
   "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Exchange Parkway పక్కన ఉన్న కాలిబాట మొదలు పార్కింగ్‌లో వాహనం నిలపండి. నడక ఇక్కడే మజిలీ 1 నుండి మొదలవుతుంది. ఉచితం.",
   "Open the address in a maps app": "చిరునామాను మ్యాప్స్ యాప్‌లో తెరవండి",
   "Walking map": "నడక మ్యాప్",
+  "A Project of Synchronous Life Labs. Visit": "Synchronous Life Labs యొక్క ఒక ప్రాజెక్ట్. మరిన్ని ప్రాజెక్టుల కోసం",
+  "to discover more projects.": "ను సందర్శించండి.",
   "High contrast": "అధిక కాంట్రాస్ట్",
   "Black, white and yellow for bright sun or low vision": "బలమైన ఎండ లేదా తక్కువ చూపు కోసం నలుపు, తెలుపు, పసుపు",
   "Less motion": "తక్కువ కదలిక", "Turns off animation": "యానిమేషన్‌ను ఆపుతుంది",

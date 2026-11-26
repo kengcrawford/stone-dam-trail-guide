@@ -842,7 +842,7 @@ function renderTour(){
       </ol>
     </section>
 
-    <p class="demo-note">Demo prototype. Stories are drafted from public historical sources; distances, grades and amenities are placeholder values to be measured on site with Allen Parks &amp; Recreation.</p>
+    <p style="text-align:center;font-size:.92em;margin-top:6px">A Project of Synchronous Life Labs. Visit <a href="https://synchronouslife.com/labs" target="_blank" rel="noopener">SynchronousLife.com/Labs</a> to discover more projects.</p>
   </div>`;
   view.querySelectorAll("[data-route]").forEach(b => b.addEventListener("click", () => { S.route = b.dataset.route; save(); renderTour(); }));
 }

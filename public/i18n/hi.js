@@ -64,6 +64,8 @@ ui: {
   "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "Exchange Parkway के पास पगडंडी की शुरुआत वाली पार्किंग में गाड़ी खड़ी करें। सैर यहीं पड़ाव 1 से शुरू होती है। मुफ़्त।",
   "Open the address in a maps app": "पता नक़्शा ऐप में खोलें",
   "Walking map": "पैदल नक़्शा",
+  "A Project of Synchronous Life Labs. Visit": "Synchronous Life Labs की एक परियोजना। और परियोजनाएँ देखने के लिए",
+  "to discover more projects.": "पर जाएँ।",
   "High contrast": "उच्च कंट्रास्ट",
   "Black, white and yellow for bright sun or low vision": "तेज़ धूप या कमज़ोर नज़र के लिए काला, सफ़ेद और पीला",
   "Less motion": "कम हलचल", "Turns off animation": "एनिमेशन बंद करता है",

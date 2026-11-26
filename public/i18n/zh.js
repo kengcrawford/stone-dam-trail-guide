@@ -65,6 +65,8 @@ ui: {
   "Park in the trailhead lot off Exchange Parkway. The walk starts here at Stop 1. Free.": "请在 Exchange Parkway 旁的步道起点停车场停车。步行从这里的第 1 站开始。免费。",
   "Open the address in a maps app": "在地图应用中打开地址",
   "Walking map": "步行地图",
+  "A Project of Synchronous Life Labs. Visit": "Synchronous Life Labs 项目。访问",
+  "to discover more projects.": "了解更多项目。",
   "High contrast": "高对比度",
   "Black, white and yellow for bright sun or low vision": "黑、白、黄配色，适合强烈阳光或低视力",
   "Less motion": "减少动画", "Turns off animation": "关闭动画效果",
