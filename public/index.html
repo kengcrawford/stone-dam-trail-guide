@@ -236,6 +236,8 @@ ul.tight{margin:6px 0 0;padding-inline-start:20px} ul.tight li+li{margin-top:4px
 .installbtn[hidden]{display:none}
 @media (max-width:420px){.installbtn{padding:8px 11px}.installbtn span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
 @media (max-width:440px){.top{gap:6px;padding:10px 12px}.top .iconbtn{padding:8px 10px;min-width:40px}.top .themebtn{width:40px;padding:0}.brand span{font-size:.74em}.brand b{font-size:.95em}.langbtn svg{width:16px;height:16px}}
+#view:focus{outline:none}
+.sitefoot{margin-top:28px;padding-top:14px;border-top:1px solid var(--line);text-align:center;font-size:.84em;color:var(--muted);display:flex;flex-direction:column;gap:4px}
 .themebtn{width:44px;padding:0;display:grid;place-items:center}.themebtn svg{width:22px;height:22px}
 .platebg{background:color-mix(in srgb, var(--accent) 9%, var(--bg));border-radius:12px;display:grid;place-items:center;aspect-ratio:1}
 :root[data-contrast="high"] .platebg{background:#FFFFFF}
@@ -280,7 +282,13 @@ ul.tight{margin:6px 0 0;padding-inline-start:20px} ul.tight li+li{margin-top:4px
     <button class="iconbtn themebtn" id="themeBtn" aria-label="Switch to dark mode" title="Switch to dark mode"></button>
     <button class="iconbtn" id="openSettings" aria-haspopup="dialog" aria-label="Make the guide work for you" title="Make the guide work for you"><span aria-hidden="true" data-notr>Aa</span></button>
   </header>
-  <main id="view" tabindex="-1"></main>
+  <main>
+    <div id="view" tabindex="-1"></div>
+    <footer class="sitefoot">
+      <p>Prototype by Ken G. Crawford Consulting, November 2026. Not an official City of Allen product.</p>
+      <p>A Project of Synchronous Life Labs. Visit <a href="https://synchronouslife.com/labs" target="_blank" rel="noopener">SynchronousLife.com/Labs</a> to discover more projects.</p>
+    </footer>
+  </main>
   <nav class="tabs" aria-label="Guide sections">
     <div class="tabs-inner">
       <a href="#tour" data-tab="tour"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19c4-1 4-6 8-7s4-6 8-7"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="5" r="2"/></svg>Tour</a>
@@ -842,7 +850,6 @@ function renderTour(){
       </ol>
     </section>
 
-    <p style="text-align:center;font-size:.92em;margin-top:6px">A Project of Synchronous Life Labs. Visit <a href="https://synchronouslife.com/labs" target="_blank" rel="noopener">SynchronousLife.com/Labs</a> to discover more projects.</p>
   </div>`;
   view.querySelectorAll("[data-route]").forEach(b => b.addEventListener("click", () => { S.route = b.dataset.route; save(); renderTour(); }));
 }
@@ -1249,8 +1256,6 @@ function renderAbout(){
         <li><a href="https://communityimpact.com/dallas-fort-worth/features/2016/11/19/city-of-allen-history">City of Allen history</a> (Community Impact)</li>
       </ul>
     </section>
-    <p class="demo-note">Prototype by Ken G. Crawford Consulting, November 2026. Not an official City of Allen product.</p>
-    <p style="text-align:center;font-size:.92em;margin-top:6px">A Project of Synchronous Life Labs. Visit <a href="https://synchronouslife.com/labs" target="_blank" rel="noopener">SynchronousLife.com/Labs</a> to discover more projects.</p>
   </div>`;
   const msg = document.getElementById("svMsg");
   view.querySelectorAll("[data-rec]").forEach(b => b.addEventListener("click", () => {

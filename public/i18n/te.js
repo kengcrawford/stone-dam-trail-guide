@@ -66,6 +66,7 @@ ui: {
   "Walking map": "నడక మ్యాప్",
   "A Project of Synchronous Life Labs. Visit": "Synchronous Life Labs యొక్క ఒక ప్రాజెక్ట్. మరిన్ని ప్రాజెక్టుల కోసం",
   "to discover more projects.": "ను సందర్శించండి.",
+  "Prototype by Ken G. Crawford Consulting, November 2026. Not an official City of Allen product.": "Ken G. Crawford Consulting రూపొందించిన నమూనా, నవంబర్ 2026. ఇది సిటీ ఆఫ్ అలెన్ అధికారిక ఉత్పత్తి కాదు.",
   "High contrast": "అధిక కాంట్రాస్ట్",
   "Black, white and yellow for bright sun or low vision": "బలమైన ఎండ లేదా తక్కువ చూపు కోసం నలుపు, తెలుపు, పసుపు",
   "Less motion": "తక్కువ కదలిక", "Turns off animation": "యానిమేషన్‌ను ఆపుతుంది",

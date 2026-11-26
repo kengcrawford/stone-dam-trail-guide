@@ -67,6 +67,7 @@ ui: {
   "Walking map": "Bản đồ đi bộ",
   "A Project of Synchronous Life Labs. Visit": "Một dự án của Synchronous Life Labs. Truy cập",
   "to discover more projects.": "để khám phá thêm các dự án khác.",
+  "Prototype by Ken G. Crawford Consulting, November 2026. Not an official City of Allen product.": "Bản mẫu của Ken G. Crawford Consulting, tháng 11 năm 2026. Không phải sản phẩm chính thức của Thành phố Allen.",
   "High contrast": "Độ tương phản cao",
   "Black, white and yellow for bright sun or low vision": "Đen, trắng và vàng cho nắng gắt hoặc thị lực kém",
   "Less motion": "Giảm chuyển động", "Turns off animation": "Tắt hiệu ứng động",

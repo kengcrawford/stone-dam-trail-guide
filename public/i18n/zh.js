@@ -67,6 +67,7 @@ ui: {
   "Walking map": "步行地图",
   "A Project of Synchronous Life Labs. Visit": "Synchronous Life Labs 项目。访问",
   "to discover more projects.": "了解更多项目。",
+  "Prototype by Ken G. Crawford Consulting, November 2026. Not an official City of Allen product.": "Ken G. Crawford Consulting 制作的原型，2026 年 11 月。并非艾伦市官方产品。",
   "High contrast": "高对比度",
   "Black, white and yellow for bright sun or low vision": "黑、白、黄配色，适合强烈阳光或低视力",
   "Less motion": "减少动画", "Turns off animation": "关闭动画效果",

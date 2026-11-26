@@ -66,6 +66,7 @@ ui: {
   "Walking map": "पैदल नक़्शा",
   "A Project of Synchronous Life Labs. Visit": "Synchronous Life Labs की एक परियोजना। और परियोजनाएँ देखने के लिए",
   "to discover more projects.": "पर जाएँ।",
+  "Prototype by Ken G. Crawford Consulting, November 2026. Not an official City of Allen product.": "Ken G. Crawford Consulting द्वारा प्रोटोटाइप, नवंबर 2026। यह सिटी ऑफ़ एलन का आधिकारिक उत्पाद नहीं है।",
   "High contrast": "उच्च कंट्रास्ट",
   "Black, white and yellow for bright sun or low vision": "तेज़ धूप या कमज़ोर नज़र के लिए काला, सफ़ेद और पीला",
   "Less motion": "कम हलचल", "Turns off animation": "एनिमेशन बंद करता है",
